@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#764ba2">
+  <meta charset="UTF-8">
+  <title>Gerador de Legendas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gerador de Legendas</h1>
+
+    <div class="categorias">
+      <button class="catBtn" data-cat="motivacional">Motivacional</button>
+      <button class="catBtn" data-cat="fitness">Fitness</button>
+      <button class="catBtn" data-cat="negocios">Negócios</button>
+      <button class="catBtn" data-cat="romantico">Romântico</button>
+      <button class="catBtn" data-cat="engracado">Engraçado</button>
+      <button class="catBtn" data-cat="viagem">Viagem</button>
+    </div>
+
+    <div id="resultado">Clique em gerar legenda</div>
+
+    <button class="gerar" onclick="gerarLegenda()">Gerar legenda</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
