@@ -1,55 +1,120 @@
-let categoriaAtual = "motivacional";
-
-// Aqui coloquei 5 frases como exemplo, você pode expandir para 50
 const categorias = {
   motivacional: {
-    inicio: ["Acredite", "Nunca desista", "Tudo começa", "Não desista nunca", "O segredo é"],
-    meio: ["em você", "com foco", "com coragem", "sem medo", "todos os dias"],
-    fim: ["✨", "🔥", "🚀", "💪", "💯"]
+    inicio: ["Acredite", "Nunca desista", "Tudo começa", ...], // 50 frases
+    meio: ["em você", "com foco", "com coragem", ...], // 50 frases
+    fim: ["✨","🔥","🚀", ...] // 50 frases
   },
   fitness: {
-    inicio: ["Treine", "Supere-se", "Disciplina", "Mova-se", "Coragem"],
-    meio: ["todos os dias", "sem desculpas", "é o segredo", "para vencer", "na rotina"],
-    fim: ["💪", "🏋️", "🔥", "⚡", "💯"]
+    inicio: ["Treine","Supere-se","Disciplina", ...],
+    meio: ["todos os dias","sem desculpas","é o segredo", ...],
+    fim: ["💪","🏋️","🔥", ...]
   },
   negocios: {
-    inicio: ["Negócios", "Sucesso", "Resultados", "Estratégia", "Crescimento"],
-    meio: ["exigem ação", "vem com disciplina", "nasce da constância", "com dedicação", "com foco"],
-    fim: ["📈", "💼", "🚀", "💡", "🏆"]
+    inicio: ["Negócios","Sucesso","Resultados","Estratégia","Crescimento",
+             "Empreenda","Invista","Inove","Planeje","Conquiste",
+             "Lidere","Cresça","Foque","Realize","Avance",
+             "Construa","Acredite","Supere","Organize","Prospere",
+             "Transforme","Ouse","Aprenda","Desenvolva","Rumo ao topo",
+             "Execute","Decida","Persista","Motivo","Empreendimento",
+             "Oportunidade","Potencial","Visão","Meta","Planejamento",
+             "Habilidade","Disciplina","Foco total","Consistência","Resultado",
+             "Compromisso","Dedicação","Energia","Determinação","Estratégia",
+             "Progresso","Crescimento","Conquista","Iniciativa","Sucesso garantido"],
+    meio: ["exigem ação","vem com disciplina","nasce da constância","com dedicação","com foco",
+           "é necessário esforço","para crescer","com planejamento","na prática","para vencer",
+           "com persistência","na jornada","com estratégia","para conquistar","com motivação",
+           "com coragem","na execução","em cada passo","com visão","com inovação",
+           "com criatividade","para resultados","em cada desafio","com decisão","na liderança",
+           "para alcançar metas","com consistência","na busca do sucesso","com energia","com atitude",
+           "com disciplina","em cada projeto","para prosperar","com determinação","com comprometimento",
+           "para evoluir","na ação","com paixão","com iniciativa","em cada oportunidade",
+           "com esforço contínuo","para crescer","em cada meta","com inteligência","para realizar",
+           "com estratégia inteligente","em cada objetivo","para avançar","com foco total","com ação"],
+    fim: ["📈","💼","🚀","💡","🏆","📊","💰","🏅","✨","💥",
+          "📣","🎯","🔑","🏛️","📌","💳","🗂️","📑","💹","🏢",
+          "💎","📋","📝","📎","🔝","🛠️","⚡","🎖️","🏔️","🌟",
+          "💼💼","🏆🏆","🚀🚀","📈📈","💡💡","🎯🎯","🏅🏅","💥💥","💰💰","✨✨",
+          "📊📊","📝📝","📌📌","🔑🔑","🛠️🛠️","💳💳","🏛️🏛️","📎📎","🗂️🗂️","💹💹"]
   },
   romantico: {
-    inicio: ["Amor", "Você", "Meu coração", "Paixão", "Sentimento"],
-    meio: ["é tudo", "bate por você", "me completa", "é infinito", "me inspira"],
-    fim: ["❤️", "😍", "💖", "💕", "💞"]
+    inicio: ["Amor","Você","Meu coração","Paixão","Sentimento",
+             "Amizade","Afeto","Carinho","Desejo","Encanto",
+             "Beleza","Amado(a)","Ternura","Sorriso","Amar",
+             "Sentir","Cuidado","Abraço","Emoção","Desejo profundo",
+             "Carinho puro","Doce amor","Fascínio","Romance","Encanto do coração",
+             "Afeto sincero","Amor verdadeiro","Paixão intensa","Atração","Desejo ardente",
+             "Sentimentos","Amor eterno","Amor bonito","Meu bem","Meu querido",
+             "Meu amor","Minha paixão","Meu tesouro","Minha luz","Meu tudo",
+             "Coração apaixonado","Amor puro","Paixão verdadeira","Afeto intenso","Emoção forte",
+             "Amor sem fim","Meu encanto","Meu desejo","Meu abraço","Minha ternura"],
+    meio: ["é tudo","bate por você","me completa","é infinito","me inspira",
+           "me faz sorrir","me encanta","me emociona","me envolve","me aquece",
+           "me cativa","me seduz","me faz sonhar","me motiva","me ilumina",
+           "me faz feliz","me transforma","me apaixona","me conquista","me fascina",
+           "me eleva","me faz vibrar","me toca","me envolve totalmente","me completa por inteiro",
+           "me faz amar","me faz sentir","me faz suspirar","me abraça","me abraça forte",
+           "me enlouquece","me apaixona ainda mais","me faz sonhar alto","me deixa feliz","me inspira amor",
+           "me deixa leve","me dá alegria","me faz sorrir sempre","me aquece o coração","me faz desejar",
+           "me fascina totalmente","me faz apaixonar","me envolve profundamente","me cativa sempre","me inspira ternura",
+           "me faz vibrar de emoção","me deixa feliz de verdade","me completa completamente","me encanta a cada dia","me apaixona intensamente"],
+    fim: ["❤️","😍","💖","💕","💞","💓","💗","💘","💌","💟",
+          "💝","❣️","💛","💚","💙","💜","🧡","🤍","🤎","🖤",
+          "💔","💟💟","❤️❤️","💖💖","💕💕","💞💞","💓💓","💗💗","💘💘","💌💌",
+          "💝💝","❣️❣️","💛💛","💚💚","💙💙","💜💜","🧡🧡","🤍🤍","🤎🤎","🖤🖤",
+          "💔💔","❤️💖","💖💕","💕💞","💞💓","💓💗","💗💘","💘💌","💌💝","💝❣️"]
   },
   engracado: {
-    inicio: ["Quando eu acordo", "A vida", "Eu tentando", "Tentando ser adulto", "Sem café"],
-    meio: ["não ajuda", "me confunde", "é complicado", "é engraçado", "me faz rir"],
-    fim: ["😂", "🤣", "😅", "🤪", "😎"]
+    inicio: ["Quando eu acordo","A vida","Eu tentando","Tentando ser adulto","Sem café",
+             "Hoje eu","Meu chefe","Meu amigo","A reunião","O despertador",
+             "O trabalho","O trânsito","Minha vida","Meu cachorro","A dieta",
+             "Meu chefe disse","O professor","A escola","A aula","O notebook",
+             "O celular","Minha preguiça","O fim de semana","O café da manhã","A internet",
+             "O Wi-Fi","O elevador","A fila","Meu time","O chefe de plantão",
+             "Meu almoço","O horário","A dieta falhou","O banho","A academia",
+             "O videogame","O projeto","O chefe irritado","A segunda-feira","O chefe mandou",
+             "O almoço atrasado","O colega","A reunião longa","O café frio","O trabalho atrasado",
+             "Meu celular tocou","A internet caiu","Meu time perdeu","Meu chefe gritou","A preguiça venceu"],
+    meio: ["não ajuda","me confunde","é complicado","é engraçado","me faz rir",
+           "me deixa cansado","me faz dormir","me faz gritar","me irrita","me deixa louco",
+           "me faz sorrir","me deixa confuso","me faz pensar","me faz reclamar","me deixa feliz",
+           "me faz chorar","me deixa nervoso","me faz esperar","me deixa animado","me faz rir alto",
+           "me faz atrasar","me deixa bravo","me faz desistir","me deixa confuso","me deixa alegre",
+           "me faz surtar","me deixa cansado","me faz pular","me deixa irritado","me faz repetir",
+           "me faz sonhar","me deixa animado","me faz tremer","me deixa feliz","me faz confundir",
+           "me deixa triste","me faz rir muito","me deixa surpreso","me faz perder","me deixa emocionado",
+           "me faz esquecer","me deixa animado","me faz correr","me deixa pensativo","me faz dançar",
+           "me faz reclamar","me deixa alegre","me faz dormir","me deixa confuso","me faz rir demais"],
+    fim: ["😂","🤣","😅","🤪","😎","🤣🤣","😂😂","😆","😹","😜",
+          "🙃","😝","🤭","😏","😛","😋","😬","🤐","🤔","😇",
+          "🥳","🤩","😺","😸","😻","😼","😽","😹","😾","🙀",
+          "😿","😾😾","😹😹","😸😸","😻😻","😼😼","😽😽","🙀🙀","😿😿","🥴",
+          "😝😝","🤪🤪","😅😅","😆😆","😎😎","🤣😂","😂🤣","😆😂","😜😜","🙃🙃"]
   },
   viagem: {
-    inicio: ["Explorando", "Vivendo", "Descobrindo", "Viajando", "Conhecendo"],
-    meio: ["novos lugares", "o mundo", "novas histórias", "novas culturas", "novas aventuras"],
-    fim: ["✈️", "🌍", "🏖️", "🏔️", "🚢"]
+    inicio: ["Explorando","Vivendo","Descobrindo","Viajando","Conhecendo",
+             "Visitando","Passeando","Descobrindo","Aventurando","Explorando o mundo",
+             "Conhecendo cidades","Viajando sempre","Desbravando","Descobrindo culturas","Explorando novos lugares",
+             "Viajando sozinho","Aventura","Turismo","Excursão","Passeio incrível",
+             "Rumo ao desconhecido","Descoberta","Exploração","Viagem dos sonhos","Conhecendo pessoas",
+             "Desfrutando","Em cada cidade","Na estrada","Com mochila","Descobrindo tesouros",
+             "Rumo à aventura","No avião","No trem","No ônibus","Explorando praias",
+             "Explorando montanhas","Aventuras incríveis","Na natureza","Passeando pelo mundo","Descobrindo paisagens",
+             "Viajando com amigos","Explorando cidades históricas","Conhecendo monumentos","Viajando e aprendendo","Descobrindo gastronomia",
+             "Explorando ilhas","Rumo ao desconhecido","Em cada trilha","Descobrindo segredos","Explorando aventuras"],
+    meio: ["novos lugares","o mundo","novas histórias","novas culturas","novas aventuras",
+           "paisagens incríveis","praias paradisíacas","montanhas altas","cidades históricas","culinária local",
+           "experiências únicas","roteiros secretos","pessoas incríveis","trilhas maravilhosas","lugares exóticos",
+           "paisagens de tirar o fôlego","experiências inesquecíveis","destinos incríveis","viagens fantásticas","cidades encantadoras",
+           "pontos turísticos","novos horizontes","aventuras emocionantes","descobertas incríveis","lugares deslumbrantes",
+           "experiências autênticas","novos sabores","viagem cultural","cidades vibrantes","exploração intensa",
+           "roteiros inusitados","experiências locais","lugares icônicos","viagem relaxante","aventuras radicais",
+           "praias secretas","montanhas incríveis","viagem de sonho","experiências únicas","descobertas fantásticas",
+           "roteiros incríveis","pontos históricos","destinos secretos","experiências memoráveis","paisagens sensacionais",
+           "viagem inesquecível","exploração cultural","aventuras pela natureza","roteiros imperdíveis","novos desafios"],
+    fim: ["✈️","🌍","🏖️","🏔️","🚢","🏕️","🗺️","🌄","🌅","🌊",
+          "🌴","⛰️","🏜️","🏝️","🛳️","🏞️","🚶‍♂️","🚶‍♀️","🧭","🎒",
+          "🏟️","🏰","🕌","⛩️","🏯","🗽","🏙️","🛶","🚵‍♂️","🚵‍♀️",
+          "🪂","🏄‍♂️","🏄‍♀️","🤿","⛷️","🏂","🛶","🛫","🛬","🛥️",
+          "🏔️🏔️","🌊🌊","🏖️🏖️","🌍🌍","✈️✈️","🗺️🗺️","🎒🎒","🌴🌴","🚵🚵","🏞️🏞️"]
   }
 };
-
-// Seleção de categoria
-document.querySelectorAll(".catBtn").forEach(botao => {
-  botao.addEventListener("click", () => {
-    categoriaAtual = botao.dataset.cat;
-    document.getElementById("resultado").innerText =
-      `Categoria selecionada: ${botao.innerText}`;
-  });
-});
-
-// Gerar legenda
-function gerarLegenda() {
-  const cat = categorias[categoriaAtual];
-  const inicio = cat.inicio[Math.floor(Math.random() * cat.inicio.length)];
-  const meio = cat.meio[Math.floor(Math.random() * cat.meio.length)];
-  const fim = cat.fim[Math.floor(Math.random() * cat.fim.length)];
-
-  document.getElementById("resultado").innerText =
-    `${inicio} ${meio} ${fim}`;
-}
