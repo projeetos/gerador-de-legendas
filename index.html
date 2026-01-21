@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerador de Legendas</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#764ba2">
 </head>
 <body>
   <div class="container">
     <h1>Gerador de Legendas</h1>
 
-    <!-- Botões de categorias -->
     <div class="categorias">
       <button class="catBtn" data-cat="motivacional">Motivacional</button>
       <button class="catBtn" data-cat="fitness">Fitness</button>
@@ -22,16 +19,16 @@
       <button class="catBtn" data-cat="viagem">Viagem</button>
     </div>
 
-    <!-- Botões de ação -->
-    <button class="gerar" onclick="gerarLegenda()">Gerar Legenda</button>
-    <button class="copiar" onclick="copiarLegenda()">Copiar Legenda</button>
-    <button class="whatsapp" onclick="enviarWhatsApp()">Compartilhar WhatsApp</button>
+    <div class="acoes">
+      <button class="gerar">Gerar Legenda</button>
+      <button class="copiar">Copiar Legenda</button>
+      <button class="whatsapp">Compartilhar WhatsApp</button>
+    </div>
 
-    <!-- Resultado -->
-    <div id="resultado">Clique em gerar legenda</div>
+    <div id="resultado">Clique em uma categoria e depois em gerar legenda</div>
   </div>
 
-  <!-- Script JS -->
+  <!-- Script JS no final do body -->
   <script src="script.js"></script>
 </body>
 </html>
