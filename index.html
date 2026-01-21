@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#764ba2">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerador de Legendas</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#764ba2">
 </head>
 <body>
-
   <div class="container">
     <h1>Gerador de Legendas</h1>
 
@@ -21,9 +21,9 @@
       <button class="catBtn" data-cat="viagem">Viagem</button>
     </div>
 
-    <div id="resultado">Clique em gerar legenda</div>
+    <button class="gerar" onclick="gerarLegenda()">Gerar Legenda</button>
 
-    <button class="gerar" onclick="gerarLegenda()">Gerar legenda</button>
+    <div id="resultado">Clique em gerar legenda</div>
   </div>
 
   <script src="script.js"></script>
